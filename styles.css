@@ -1,90 +1,119 @@
+/* Base Styles */
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #18605d;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-    width: 400px;
-    height: 350px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  width: 400px; /* Adjust width if needed */
 }
 
-.container {
-    max-width: 450px;
-    background: #a1cec5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto;
+/* Header */
+header {
+  background-color: #0d6efd; /* Blue header */
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
-h1 {
-    font-size: 24px;
-    color: black;
+/* Main content area */
+main {
+  padding: 1rem;
 }
 
+/* Section Styles */
+.class-section,
+.assignments-section,
+.ocr-section {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+.class-section h2,
+.assignments-section h2,
+.ocr-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Buttons */
 .btn {
-    background-color: #90ab86;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .btn:hover {
-    background-color: #64765d;
+  background-color: #0b5ed7;
 }
 
-u1 {
-    list-style: none;
-    padding: 0;
+/* Dropdown (select) */
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
 }
 
-li {
-    background: #e9ecef;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Assignment List */
+#assignmentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.task-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 5px;
+#assignmentList li {
+  background: #e9ecef;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  color: #333;
 }
 
-button {
-    cursor: pointer;
+/* Assignment buttons container */
+.assignment-buttons {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
+/* File Upload */
 .upload {
-    margin: 10px;
-    padding: 5px;
+  margin: 0.5rem 0;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
 }
 
-.loading {
-    margin-top: 10px;
-    font-style: italic;
-    color: #555;
-}
-
-.hidden {
-    display: none;
-}
-
+/* Image Preview */
 .preview {
-    display: block;
-    margin: 10px auto;
-    max-width: 90%;
-    height: auto;
-    border: 1px solid  #ccc;
-    border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  max-width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-hr {
-    margin: 15px 0;
+/* Loading Indicator */
+.loading {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
 }

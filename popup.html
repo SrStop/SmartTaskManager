@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> Smart Task Manager </title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="popup.js" defer></script>
-        <script src="tesseract.min.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <h1> Tasks </h1>
-            <div class="folder-selection">
-                <label for="folderSelect"> Select Folder: </label>
-                <select id="folderSelect"></select>
-                <button id="addFolder" class="btn"> Add Folder </button>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule and Task Planner</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="popup.js" defer></script>
+  <script src="tesseract.min.js"></script>
+</head>
+<body>
+<h2>&nbsp; &nbsp; Schedule and Task Planner</h2>
+<button id="addClassBtn" class="btn">Add Your Class</button>
+<button id="addAssignmentBtn" class="btn">Add Assignment</button>
+<main> <!-- Class Section -->
+    
+  <h4> Your Classes</h4>
+  <section class="class-section">
+<select id="classSelect">
+</select>
+</section>
 
-            <hr>
-
-            <u1 id="taskList" class="u1"></u1>
-            <button id="addTask" class="btn"> Add Task </button>
-
-            <hr>
-
-            <div class="ocr-section">
-                <input type="file" id="imageUpload" class="upload" accept="image/*">
-                <button id="ocrTask" class="btn"> OCR Task </button>
-                <img id="imagePreview" class="preview hidden" alt="Image Preview">
-                <div id="loading" class="loading hidden"> Processing Image... </div>
-            </div>
-        </div>
-    </body>
+    <!-- Assignments Section -->
+    
+  <h4>Assignments</h4>
+  <section class="assignments-section">
+    <ul id="assignmentList">
+    </ul>
+  </section>
+<!-- OCR Section -->
+    <section class="ocr-section">
+      <h6>OCR Task Automatic</h6>
+      <div>
+        <input type="file" id="imageUpload" class="upload" accept="image/*">
+      </div>
+      <button id="ocrTaskBtn" class="btn">Process Image</button>
+      <img id="imagePreview" class="preview hidden" alt="Image Preview">
+      <div id="loading" class="loading hidden">Processing Image...</div>
+    </section>
+<p>
+  <footer class="date-time">
+    <div id="currentDateTime" class="date-time"></div>
+  </footer>
+  &nbsp;&nbsp; </p>
+</main>
+</body>
 </html>

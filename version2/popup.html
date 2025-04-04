@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule and Task Planner</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="popup.js" defer></script>
+  <script src="tesseract.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Schedule and Task Planner</h1>
+  </header>
+  <main>
+    <!-- Section for managing classes -->
+    <section class="class-section">
+      <h2>Your Classes</h2>
+      <button id="addClassBtn" class="btn">Add Your Class</button>
+      <select id="classSelect"></select>
+    </section>
+
+    <!-- Section for assignments -->
+    <section class="assignments-section">
+      <h2>Assignments</h2>
+      <button id="addAssignmentBtn" class="btn">Add Assignment</button>
+      <ul id="assignmentList"></ul>
+    </section>
+
+    <!-- Section for OCR functionality -->
+    <section class="ocr-section">
+      <h2>OCR Task Automatic</h2>
+      <input type="file" id="imageUpload" accept="image/*" class="upload">
+      <button id="ocrTaskBtn" class="btn">Process Image</button>
+      <img id="imagePreview" class="preview hidden" alt="Image Preview">
+      <div id="loading" class="loading hidden">Processing Image...</div>
+    </section>
+  </main>
+</body>
+</html>

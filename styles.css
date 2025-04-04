@@ -1,90 +1,173 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #18605d;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-    width: 400px;
-    height: 350px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  width: 400px; /* Adjust width as needed for the popup */
+  margin: auto;
+  padding: 1rem;
 }
 
-.container {
-    max-width: 450px;
-    background: #a1cec5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto;
+/* Header */
+header {
+  background-color: #0d6efd;  /* Blue header */
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
-h1 {
-    font-size: 24px;
-    color: black;
+/* Main Content */
+main {
+  padding: 1rem 0;
 }
 
+/* Section Styles (for classes, assignments, OCR, etc.) */
+.class-section,
+.assignments-section,
+.ocr-section {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.class-section h2,
+.assignments-section h2,
+.ocr-section h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Blue Box for Assignment Details (example for detailed assignment view) */
+.blue-box {
+  background-color: #007bff;  /* A distinct shade of blue */
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 1rem auto;
+  margin-bottom: 2rem;
+}
+.blue-box h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.blue-box p {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+.button-container {
+  margin-top: 1rem;
+}
+.button-container button {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #007bff;
+  font-weight: bold;
+}
+.button-container button:hover {
+  background-color: #e6e6e6;
+}
+.footer-info {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #e2e2e2;
+}
+
+/* Buttons for Popup Sections */
 .btn {
-    background-color: #90ab86;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
-
 .btn:hover {
-    background-color: #64765d;
+  background-color: #0b5ed7;
 }
 
-u1 {
-    list-style: none;
-    padding: 0;
+/* Dropdown (select) */
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.5rem;
 }
 
-li {
-    background: #e9ecef;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Assignment List Styles */
+#assignmentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#assignmentList li {
+  background: #e9ecef;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+.assignment-buttons {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.task-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 5px;
-}
-
-button {
-    cursor: pointer;
-}
-
+/* File Upload */
 .upload {
-    margin: 10px;
-    padding: 5px;
+  width: 100%;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0.5rem 0;
 }
 
-.loading {
-    margin-top: 10px;
-    font-style: italic;
-    color: #555;
-}
-
-.hidden {
-    display: none;
-}
-
+/* Image Preview */
 .preview {
-    display: block;
-    margin: 10px auto;
-    max-width: 90%;
-    height: auto;
-    border: 1px solid  #ccc;
-    border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  max-width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-hr {
-    margin: 15px 0;
+/* Loading Indicator */
+.loading {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
 }
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+/* Footer for Real-Time Date/Time (Texas) */
+footer {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  margin-top: 1rem;
+}
+.date-time {
+  font-weight: bold;
+  color: #333;
+}
+
